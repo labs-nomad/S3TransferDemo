@@ -19,7 +19,7 @@ public class JPEGDownload: S3Downloadable {
     
     public var progress: CurrentValueSubject<Double, Never>
     
-    public var task: AWSS3TransferUtilityMultiPartUploadTask?
+    public var task: AWSS3TransferUtilityTask?
     
     public var taskStatusKVOSubscription: AnyCancellable?
     

@@ -12,9 +12,9 @@ import AWSS3
 
 class S3Credentials: NSObject, AWSCredentialsProvider {
     
-    let accessKey = "<Access Key>"
+    let accessKey = ""
     
-    let secretKey = "<Secret Key>"
+    let secretKey = ""
     
     func credentials() -> AWSTask<AWSCredentials> {
         let credentials = AWSCredentials(accessKey: accessKey, secretKey: secretKey, sessionKey: nil, expiration: nil)

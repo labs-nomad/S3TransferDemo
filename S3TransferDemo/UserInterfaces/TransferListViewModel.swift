@@ -8,6 +8,7 @@
 import SwiftUI
 import Combine
 import UIKit
+import AWSCore
 
 class TransferListViewModel: ObservableObject {
     
@@ -28,15 +29,19 @@ class TransferListViewModel: ObservableObject {
     let formatter = DateFormatter()
     
     init() {
+        AWSDDLog.sharedInstance.logLevel = .debug
         self.formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZZZ"
         self.formatter.timeZone = TimeZone(identifier: "UTC")
-        self.controller = try! S3TransferController(s3Credentials: S3Credentials(), bucketName: "device-metadata-edge-development")
+        
+        let bucketName = ""
+        
+        self.controller = try! S3TransferController(s3Credentials: S3Credentials(), bucketName: bucketName)
         self.eventSubscription = self.transferEvents.receive(on: DispatchQueue.global(qos: .background)).flatMap { [weak self] (event) -> AnyPublisher<S3Transferable, Never> in
             guard let self = self else {
                 fatalError("No Strong Self")
             }
-            let width: CGFloat = 150
-            let height: CGFloat = 150
+            let width: CGFloat = 1000
+            let height: CGFloat = 1000
             let randomImage: UIImage = SabilandTB(width: width, height: height).SabilandTrippyBackground
             let data = randomImage.jpegData(compressionQuality: 1)!
             let date = self.formatter.string(from: Date())

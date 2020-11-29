@@ -14,15 +14,15 @@ public protocol S3Transferable: class {
     var id: UUID { get }
     var objectCloudKey: String { get }
     var progress: CurrentValueSubject<Double, Never> { get }
-    var task: AWSS3TransferUtilityMultiPartUploadTask? { get set }
+    var task: AWSS3TransferUtilityTask? { get set }
     var status: CurrentValueSubject<AWSS3TransferUtilityTransferStatusType, Never> { get }
     var taskStatusKVOSubscription: AnyCancellable? { get set}
     var taskStatusSubscription: AnyCancellable? { get set}
-    func add(task: AWSS3TransferUtilityMultiPartUploadTask)
+    func add(task: AWSS3TransferUtilityTask)
 }
 
 extension S3Transferable {
-    public func add(task: AWSS3TransferUtilityMultiPartUploadTask) {
+    public func add(task: AWSS3TransferUtilityTask) {
         self.task = task
         self.taskStatusKVOSubscription = task.publisher(for: \.status).sink(receiveValue: { [weak self] (newStatus) in
             self?.status.send(newStatus)

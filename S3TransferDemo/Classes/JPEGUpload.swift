@@ -11,6 +11,7 @@ import Combine
 
 public class JPEGUpload: S3Uploadable {
     
+    
     public var id: UUID = UUID()
     
     public var uploadableObjectLocation: S3UploadLocation
@@ -21,7 +22,7 @@ public class JPEGUpload: S3Uploadable {
     
     public var progress: CurrentValueSubject<Double, Never>
     
-    public var task: AWSS3TransferUtilityMultiPartUploadTask?
+    public var task: AWSS3TransferUtilityTask?
     
     public var taskStatusKVOSubscription: AnyCancellable?
     

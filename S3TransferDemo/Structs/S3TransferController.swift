@@ -125,21 +125,21 @@ public struct S3TransferController {
         return future
     }
     
+    
     public func upload(objectToUpload object: S3Uploadable) -> Future<S3Uploadable, Error> {
         let future: Future<S3Uploadable, Error> = Future<S3Uploadable, Error> { promise in
-            
             guard let transferUtility = AWSS3TransferUtility.s3TransferUtility(forKey: self.utilityKey.key) else {
                 promise(.failure(S3TransferError.couldNotRetrieveTransferUtility))
                 return
             }
 
-            let expression = AWSS3TransferUtilityMultiPartUploadExpression()
-            expression.progressBlock = { (_ task: AWSS3TransferUtilityMultiPartUploadTask, _ progress: Progress) in
+            let expression = AWSS3TransferUtilityUploadExpression()
+            expression.progressBlock = { (_ task: AWSS3TransferUtilityTask, _ progress: Progress) in
                 object.progress.send(progress.fractionCompleted)
             }
 
 
-            let completionHandle: AWSS3TransferUtilityMultiPartUploadCompletionHandlerBlock = { (task, p_error) -> Void in
+            let completionHandle: AWSS3TransferUtilityUploadCompletionHandlerBlock = { (task, p_error) -> Void in
                 guard let error = p_error else {
                     promise(.success(object))
                     return
@@ -153,7 +153,7 @@ public struct S3TransferController {
 
             switch object.uploadableObjectLocation {
             case .DATA_OBJECT(let data):
-                _ = transferUtility.uploadUsingMultiPart(data: data, key: key, contentType: contentType, expression: expression, completionHandler: completionHandle).continueWith {  (task) -> Any? in
+                _ = transferUtility.uploadData(data, key: key, contentType: contentType, expression: expression, completionHandler: completionHandle).continueWith { (task) -> Any? in
                     if let result = task.result {
                         object.add(task: result)
                     }
@@ -164,7 +164,7 @@ public struct S3TransferController {
                     return nil
                 } as? AWSTask<AWSS3TransferUtilityTask>
             case .LOCAL_FILE(let url):
-                _ = transferUtility.uploadUsingMultiPart(fileURL: url, key: key, contentType: contentType, expression: expression, completionHandler: completionHandle).continueWith(block: { (task) -> Any? in
+                _ = transferUtility.uploadFile(url, key: key, contentType: contentType, expression: expression, completionHandler: completionHandle).continueWith(block: { (task) -> Any? in
                     if let result = task.result {
                         object.add(task: result)
                     }
@@ -173,64 +173,10 @@ public struct S3TransferController {
                     }
                     promise(.failure(error))
                     return nil
-                })
+                }) as? AWSTask<AWSS3TransferUtilityTask>
             }
         }
         return future
     }
-    
-    
-//    public func upload(objectToUpload object: S3Uploadable) -> Future<S3Uploadable, Error> {
-//        let future: Future<S3Uploadable, Error> = Future<S3Uploadable, Error> { promise in
-//            guard let transferUtility = AWSS3TransferUtility.s3TransferUtility(forKey: self.utilityKey.key) else {
-//                promise(.failure(S3TransferError.couldNotRetrieveTransferUtility))
-//                return
-//            }
-//
-//            let expression = AWSS3TransferUtilityUploadExpression()
-//            expression.progressBlock = { (_ task: AWSS3TransferUtilityTask, _ progress: Progress) in
-//                object.progress.send(progress.fractionCompleted)
-//            }
-//
-//
-//            let completionHandle: AWSS3TransferUtilityUploadCompletionHandlerBlock = { (task, p_error) -> Void in
-//                guard let error = p_error else {
-//                    promise(.success(object))
-//                    return
-//                }
-//                promise(.failure(error))
-//            }
-//
-//            let key: String = object.objectCloudKey
-//
-//            let contentType: String = object.contentType.rawValue
-//
-//            switch object.uploadableObjectLocation {
-//            case .DATA_OBJECT(let data):
-//                _ = transferUtility.uploadData(data, key: key, contentType: contentType, expression: expression, completionHandler: completionHandle).continueWith { (task) -> Any? in
-//                    if let result = task.result {
-//                        object.add(task: result)
-//                    }
-//                    guard let error = task.error else {
-//                        return nil
-//                    }
-//                    promise(.failure(error))
-//                    return nil
-//                } as? AWSTask<AWSS3TransferUtilityTask>
-//            case .LOCAL_FILE(let url):
-//                _ = transferUtility.uploadFile(url, key: key, contentType: contentType, expression: expression, completionHandler: completionHandle).continueWith(block: { (task) -> Any? in
-//                    if let result = task.result {
-//                        object.add(task: result)
-//                    }
-//                    guard let error = task.error else {
-//                        return nil
-//                    }
-//                    promise(.failure(error))
-//                    return nil
-//                }) as? AWSTask<AWSS3TransferUtilityTask>
-//            }
-//        }
-//        return future
-//    }
     
 }

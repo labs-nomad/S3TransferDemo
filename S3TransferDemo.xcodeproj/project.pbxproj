@@ -1,0 +1,511 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CCC7505925732F98005457B4 /* AWSS3TransferUtilityTransferStatusType_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC7505825732F98005457B4 /* AWSS3TransferUtilityTransferStatusType_Extension.swift */; };
+		CCC7505C2573329D005457B4 /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC7505B2573329D005457B4 /* ProgressBar.swift */; };
+		CCC7505F25734DAD005457B4 /* TransferableObjectCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC7505E25734DAD005457B4 /* TransferableObjectCellViewModel.swift */; };
+		CCED06682571EFC000E3D46C /* S3TransferDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCED06672571EFC000E3D46C /* S3TransferDemoApp.swift */; };
+		CCED066C2571EFC500E3D46C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCED066B2571EFC500E3D46C /* Assets.xcassets */; };
+		CCED066F2571EFC500E3D46C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCED066E2571EFC500E3D46C /* Preview Assets.xcassets */; };
+		CCED06802572271E00E3D46C /* S3Transferable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCED067F2572271E00E3D46C /* S3Transferable.swift */; };
+		CCED06842572276E00E3D46C /* S3ContentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCED06832572276E00E3D46C /* S3ContentType.swift */; };
+		CCED06882572278200E3D46C /* S3UploadLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCED06872572278200E3D46C /* S3UploadLocation.swift */; };
+		CCED068B25722A8F00E3D46C /* S3TransferController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCED068A25722A8F00E3D46C /* S3TransferController.swift */; };
+		CCED068E25722ACF00E3D46C /* S3Uploadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCED068D25722ACF00E3D46C /* S3Uploadable.swift */; };
+		CCED069225722ADC00E3D46C /* S3Downloadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCED069125722ADC00E3D46C /* S3Downloadable.swift */; };
+		CCED069625722BF800E3D46C /* S3Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCED069525722BF800E3D46C /* S3Credentials.swift */; };
+		CCED069E25730DA400E3D46C /* TransferListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCED069D25730DA400E3D46C /* TransferListView.swift */; };
+		CCED06A525730E3000E3D46C /* TransferableObjectCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCED06A425730E3000E3D46C /* TransferableObjectCellView.swift */; };
+		CCED06A925730EF500E3D46C /* RandomImageGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCED06A825730EF500E3D46C /* RandomImageGenerator.swift */; };
+		CCED06AC25730F5A00E3D46C /* JPEGDownload.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCED06AB25730F5A00E3D46C /* JPEGDownload.swift */; };
+		CCED06AF25730F6C00E3D46C /* JPEGUpload.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCED06AE25730F6C00E3D46C /* JPEGUpload.swift */; };
+		CCED06B3257311C400E3D46C /* TransferListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCED06B2257311C400E3D46C /* TransferListViewModel.swift */; };
+		D6A5E0153B8505EAEDD76B3A /* Pods_S3TransferDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDDF940E94B40BEBF6F37E4E /* Pods_S3TransferDemo.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		50A9BCE974C830BA365745A7 /* Pods-S3TransferDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-S3TransferDemo.release.xcconfig"; path = "Target Support Files/Pods-S3TransferDemo/Pods-S3TransferDemo.release.xcconfig"; sourceTree = "<group>"; };
+		CCC7505825732F98005457B4 /* AWSS3TransferUtilityTransferStatusType_Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AWSS3TransferUtilityTransferStatusType_Extension.swift; sourceTree = "<group>"; };
+		CCC7505B2573329D005457B4 /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
+		CCC7505E25734DAD005457B4 /* TransferableObjectCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferableObjectCellViewModel.swift; sourceTree = "<group>"; };
+		CCED06642571EFC000E3D46C /* S3TransferDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = S3TransferDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCED06672571EFC000E3D46C /* S3TransferDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = S3TransferDemoApp.swift; sourceTree = "<group>"; };
+		CCED066B2571EFC500E3D46C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CCED066E2571EFC500E3D46C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CCED06702571EFC500E3D46C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CCED067F2572271E00E3D46C /* S3Transferable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = S3Transferable.swift; sourceTree = "<group>"; };
+		CCED06832572276E00E3D46C /* S3ContentType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = S3ContentType.swift; sourceTree = "<group>"; };
+		CCED06872572278200E3D46C /* S3UploadLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = S3UploadLocation.swift; sourceTree = "<group>"; };
+		CCED068A25722A8F00E3D46C /* S3TransferController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = S3TransferController.swift; sourceTree = "<group>"; };
+		CCED068D25722ACF00E3D46C /* S3Uploadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = S3Uploadable.swift; sourceTree = "<group>"; };
+		CCED069125722ADC00E3D46C /* S3Downloadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = S3Downloadable.swift; sourceTree = "<group>"; };
+		CCED069525722BF800E3D46C /* S3Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = S3Credentials.swift; sourceTree = "<group>"; };
+		CCED069D25730DA400E3D46C /* TransferListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferListView.swift; sourceTree = "<group>"; };
+		CCED06A425730E3000E3D46C /* TransferableObjectCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferableObjectCellView.swift; sourceTree = "<group>"; };
+		CCED06A825730EF500E3D46C /* RandomImageGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomImageGenerator.swift; sourceTree = "<group>"; };
+		CCED06AB25730F5A00E3D46C /* JPEGDownload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JPEGDownload.swift; sourceTree = "<group>"; };
+		CCED06AE25730F6C00E3D46C /* JPEGUpload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JPEGUpload.swift; sourceTree = "<group>"; };
+		CCED06B2257311C400E3D46C /* TransferListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferListViewModel.swift; sourceTree = "<group>"; };
+		FDDF940E94B40BEBF6F37E4E /* Pods_S3TransferDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_S3TransferDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF7063E2A31F88F2ED1E5504 /* Pods-S3TransferDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-S3TransferDemo.debug.xcconfig"; path = "Target Support Files/Pods-S3TransferDemo/Pods-S3TransferDemo.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CCED06612571EFC000E3D46C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6A5E0153B8505EAEDD76B3A /* Pods_S3TransferDemo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3F7A4B6D58132D9D036C85F1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FF7063E2A31F88F2ED1E5504 /* Pods-S3TransferDemo.debug.xcconfig */,
+				50A9BCE974C830BA365745A7 /* Pods-S3TransferDemo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		A0683EE856FFDCFF63D183C3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FDDF940E94B40BEBF6F37E4E /* Pods_S3TransferDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CCC7505725732F87005457B4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CCC7505825732F98005457B4 /* AWSS3TransferUtilityTransferStatusType_Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CCED065B2571EFC000E3D46C = {
+			isa = PBXGroup;
+			children = (
+				CCED06662571EFC000E3D46C /* S3TransferDemo */,
+				CCED06652571EFC000E3D46C /* Products */,
+				3F7A4B6D58132D9D036C85F1 /* Pods */,
+				A0683EE856FFDCFF63D183C3 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		CCED06652571EFC000E3D46C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CCED06642571EFC000E3D46C /* S3TransferDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CCED06662571EFC000E3D46C /* S3TransferDemo */ = {
+			isa = PBXGroup;
+			children = (
+				CCC7505725732F87005457B4 /* Extensions */,
+				CCED069A25730BC200E3D46C /* Structs */,
+				CCED069925730B9C00E3D46C /* UserInterfaces */,
+				CCED069425722BDC00E3D46C /* Classes */,
+				CCED06822572274800E3D46C /* Enumerations */,
+				CCED067E2572271200E3D46C /* Protocols */,
+				CCED06672571EFC000E3D46C /* S3TransferDemoApp.swift */,
+				CCED066B2571EFC500E3D46C /* Assets.xcassets */,
+				CCED06702571EFC500E3D46C /* Info.plist */,
+				CCED066D2571EFC500E3D46C /* Preview Content */,
+			);
+			path = S3TransferDemo;
+			sourceTree = "<group>";
+		};
+		CCED066D2571EFC500E3D46C /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				CCED066E2571EFC500E3D46C /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CCED067E2572271200E3D46C /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				CCED067F2572271E00E3D46C /* S3Transferable.swift */,
+				CCED068D25722ACF00E3D46C /* S3Uploadable.swift */,
+				CCED069125722ADC00E3D46C /* S3Downloadable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		CCED06822572274800E3D46C /* Enumerations */ = {
+			isa = PBXGroup;
+			children = (
+				CCED06832572276E00E3D46C /* S3ContentType.swift */,
+				CCED06872572278200E3D46C /* S3UploadLocation.swift */,
+			);
+			path = Enumerations;
+			sourceTree = "<group>";
+		};
+		CCED069425722BDC00E3D46C /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				CCED069525722BF800E3D46C /* S3Credentials.swift */,
+				CCED06A825730EF500E3D46C /* RandomImageGenerator.swift */,
+				CCED06AB25730F5A00E3D46C /* JPEGDownload.swift */,
+				CCED06AE25730F6C00E3D46C /* JPEGUpload.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		CCED069925730B9C00E3D46C /* UserInterfaces */ = {
+			isa = PBXGroup;
+			children = (
+				CCED069D25730DA400E3D46C /* TransferListView.swift */,
+				CCED06B2257311C400E3D46C /* TransferListViewModel.swift */,
+				CCED06A425730E3000E3D46C /* TransferableObjectCellView.swift */,
+				CCC7505E25734DAD005457B4 /* TransferableObjectCellViewModel.swift */,
+				CCC7505B2573329D005457B4 /* ProgressBar.swift */,
+			);
+			path = UserInterfaces;
+			sourceTree = "<group>";
+		};
+		CCED069A25730BC200E3D46C /* Structs */ = {
+			isa = PBXGroup;
+			children = (
+				CCED068A25722A8F00E3D46C /* S3TransferController.swift */,
+			);
+			path = Structs;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CCED06632571EFC000E3D46C /* S3TransferDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CCED06732571EFC500E3D46C /* Build configuration list for PBXNativeTarget "S3TransferDemo" */;
+			buildPhases = (
+				71AE565A04B20E4AF0942E35 /* [CP] Check Pods Manifest.lock */,
+				CCED06602571EFC000E3D46C /* Sources */,
+				CCED06612571EFC000E3D46C /* Frameworks */,
+				CCED06622571EFC000E3D46C /* Resources */,
+				9A07258B3354E61D26A1C240 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = S3TransferDemo;
+			productName = S3TransferDemo;
+			productReference = CCED06642571EFC000E3D46C /* S3TransferDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CCED065C2571EFC000E3D46C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1220;
+				LastUpgradeCheck = 1220;
+				TargetAttributes = {
+					CCED06632571EFC000E3D46C = {
+						CreatedOnToolsVersion = 12.2;
+					};
+				};
+			};
+			buildConfigurationList = CCED065F2571EFC000E3D46C /* Build configuration list for PBXProject "S3TransferDemo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CCED065B2571EFC000E3D46C;
+			productRefGroup = CCED06652571EFC000E3D46C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CCED06632571EFC000E3D46C /* S3TransferDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CCED06622571EFC000E3D46C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCED066F2571EFC500E3D46C /* Preview Assets.xcassets in Resources */,
+				CCED066C2571EFC500E3D46C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		71AE565A04B20E4AF0942E35 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-S3TransferDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9A07258B3354E61D26A1C240 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-S3TransferDemo/Pods-S3TransferDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-S3TransferDemo/Pods-S3TransferDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-S3TransferDemo/Pods-S3TransferDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CCED06602571EFC000E3D46C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCED06802572271E00E3D46C /* S3Transferable.swift in Sources */,
+				CCED06A525730E3000E3D46C /* TransferableObjectCellView.swift in Sources */,
+				CCED069625722BF800E3D46C /* S3Credentials.swift in Sources */,
+				CCED069225722ADC00E3D46C /* S3Downloadable.swift in Sources */,
+				CCED06842572276E00E3D46C /* S3ContentType.swift in Sources */,
+				CCED069E25730DA400E3D46C /* TransferListView.swift in Sources */,
+				CCC7505C2573329D005457B4 /* ProgressBar.swift in Sources */,
+				CCED06882572278200E3D46C /* S3UploadLocation.swift in Sources */,
+				CCED06AC25730F5A00E3D46C /* JPEGDownload.swift in Sources */,
+				CCED06AF25730F6C00E3D46C /* JPEGUpload.swift in Sources */,
+				CCC7505F25734DAD005457B4 /* TransferableObjectCellViewModel.swift in Sources */,
+				CCED068B25722A8F00E3D46C /* S3TransferController.swift in Sources */,
+				CCED06682571EFC000E3D46C /* S3TransferDemoApp.swift in Sources */,
+				CCED06B3257311C400E3D46C /* TransferListViewModel.swift in Sources */,
+				CCED068E25722ACF00E3D46C /* S3Uploadable.swift in Sources */,
+				CCED06A925730EF500E3D46C /* RandomImageGenerator.swift in Sources */,
+				CCC7505925732F98005457B4 /* AWSS3TransferUtilityTransferStatusType_Extension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		CCED06712571EFC500E3D46C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CCED06722571EFC500E3D46C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CCED06742571EFC500E3D46C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FF7063E2A31F88F2ED1E5504 /* Pods-S3TransferDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"S3TransferDemo/Preview Content\"";
+				DEVELOPMENT_TEAM = 59V79TMXT8;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = S3TransferDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = jonvogel.S3TransferDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CCED06752571EFC500E3D46C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 50A9BCE974C830BA365745A7 /* Pods-S3TransferDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"S3TransferDemo/Preview Content\"";
+				DEVELOPMENT_TEAM = 59V79TMXT8;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = S3TransferDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = jonvogel.S3TransferDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CCED065F2571EFC000E3D46C /* Build configuration list for PBXProject "S3TransferDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CCED06712571EFC500E3D46C /* Debug */,
+				CCED06722571EFC500E3D46C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CCED06732571EFC500E3D46C /* Build configuration list for PBXNativeTarget "S3TransferDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CCED06742571EFC500E3D46C /* Debug */,
+				CCED06752571EFC500E3D46C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CCED065C2571EFC000E3D46C /* Project object */;
+}
